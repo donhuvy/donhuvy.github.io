@@ -12,3 +12,11 @@ Need install:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 
+{% highlight cmd %}
+gem install jekyll bundler
+jekyll new myblog
+cd myblog
+bundle exec jekyll serve
+{% endhighlight %}
+
+go to http://localhost:4000
