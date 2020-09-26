@@ -30,8 +30,4 @@ public static void sendMailByGmail(string toEmail, string subject, string conten
 }
 {% endhighlight %}
 
-Here, have some $$\pi$$.
-
-The greatest equation known to man is: 
-
-$$e^{ix} = \cos{x} + i\sin{x}$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{align*}&space;x^2&space;&plus;&space;y^2&space;&=&space;1&space;\\&space;y&space;&=&space;\sqrt{1&space;-&space;x^2}&space;\end{align*}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{align*}&space;x^2&space;&plus;&space;y^2&space;&=&space;1&space;\\&space;y&space;&=&space;\sqrt{1&space;-&space;x^2}&space;\end{align*}" title="\begin{align*} x^2 + y^2 &= 1 \\ y &= \sqrt{1 - x^2} \end{align*}" /></a>
