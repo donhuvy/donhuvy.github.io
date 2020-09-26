@@ -4,15 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Do Nhu Vy was born in Hanoi, August 26th, 1987. He is a software developer. He graduate from 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+- National Economics Unviersity, degree Master of Business Administration in English in 2019
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+- Hanoi University of Science and technology, major Information technology in 2015
 
-
-[jekyll-organization]: https://github.com/jekyll
+- Vietnam National Unviersity of Forestry, major Agro-forestry in 2009
