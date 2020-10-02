@@ -25,7 +25,8 @@ public class Java10varOld {
     public static void main(String[] args) throws IOException {
         URL mp = new URL("https://donhuvy.github.io/");
         URLConnection connection = mp.openConnection();
-        Reader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        Reader reader = new BufferedReader(new InputStreamReader(
+            connection.getInputStream()));
     }
 
 }
@@ -44,7 +45,8 @@ public class Java10varNew {
     public static void main(String[] args) throws IOException {
         var mp = new URL("https://donhuvy.github.io/");
         var connection = mp.openConnection();
-        var reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        var reader = new BufferedReader(new InputStreamReader(
+            connection.getInputStream()));
     }
 
 }
@@ -61,13 +63,16 @@ import java.security.SecureRandom;
 
 public class TestChaCha {
 
-    private static final int NONCE_LEN = 12;                    // 96 bits, 12 bytes
-    private static final int MAC_LEN = 16;                      // 128 bits, 16 bytes
+    // // 96 bits, 12 bytes.
+    private static final int NONCE_LEN = 12;
+    // 128 bits, 16 bytes.
+    private static final int MAC_LEN = 16;                      
 
     public static void main(String[] args) throws Exception {
         String input = "Java & ChaCha20-Poly1305.";
         ChaCha20Poly1305 cipher = new ChaCha20Poly1305();
-        SecretKey key = getKey();                               // 256-bit secret key (32 bytes)
+        // 256-bit secret key (32 bytes).
+        SecretKey key = getKey();
         System.out.println("Input                  : " + input);
         System.out.println("Input             (hex): " + convertBytesToHex(input.getBytes()));
         System.out.println("\n---Encryption---");
