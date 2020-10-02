@@ -8,7 +8,7 @@ New features in Java 11:
 
 <img src="https://raw.githubusercontent.com/donhuvy/donhuvy.github.io/master/images/java_roadmap.png" alt="Java roadmap" class="inline"/>
 
-[### `var` keyword](#var)
+### [`var` keyword](#var)
 
 Old way
 
@@ -52,7 +52,7 @@ public class Java10varNew {
 }
 {% endhighlight %}
 
-[### Cryptography - ChaCha20-Poly1305](#chacha20)
+### [Cryptography - ChaCha20-Poly1305](#chacha20)
 
 {% highlight java %}
 import javax.crypto.KeyGenerator;
@@ -124,7 +124,7 @@ public class TestChaCha {
 {% endhighlight %}
 
 
-[### Unicode 10](#unicode10)
+### [Unicode 10](#unicode10)
 
 {% highlight java %}
 public class Unicode10App {
