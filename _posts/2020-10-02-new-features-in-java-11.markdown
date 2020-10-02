@@ -6,7 +6,7 @@ categories: java blog
 ---
 New features in Java 11:
 
-<img src="images/java_roadmap.png" alt="Java roadmap" class="inline"/>
+<img src="https://raw.githubusercontent.com/donhuvy/donhuvy.github.io/master/images/java_roadmap.png" alt="Java roadmap" class="inline"/>
 
 Old way
 
