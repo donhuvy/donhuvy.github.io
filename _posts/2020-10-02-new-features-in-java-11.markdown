@@ -8,7 +8,7 @@ New features in Java 11:
 
 <img src="https://raw.githubusercontent.com/donhuvy/donhuvy.github.io/master/images/java_roadmap.png" alt="Java roadmap" class="inline"/>
 
-#### `var` keyword
+### `var` keyword
 
 Old way
 
@@ -50,7 +50,7 @@ public class Java10varNew {
 }
 {% endhighlight %}
 
-#### Cryptography - ChaCha20-Poly1305
+### Cryptography - ChaCha20-Poly1305
 
 {% highlight java %}
 import javax.crypto.KeyGenerator;
@@ -114,6 +114,26 @@ public class TestChaCha {
         keyGen.init(256, SecureRandom.getInstanceStrong());
         return keyGen.generateKey();
     }
+
+}
+{% endhighlight %}
+
+
+### Unicode 10
+
+{% highlight java %}
+public class Unicode10App {
+
+	public static void main(String[] args) {
+		String bear = "🐻";
+		// Nếu dòng trên không hiển thị trên trình soạn thảo,
+		// có thể dùng cách
+		// String bear = "\ud83d\udc3b";
+		int bearCodepoint = bear.codePointAt(bear.offsetByCodePoints(0, 0));
+		int something = bearCodepoint + 1;
+		char mysteryAnimal[] = { Character.highSurrogate(something), Character.lowSurrogate(something) };
+		System.out.println("Vườn thú Thủ lệ không có con này: " + String.valueOf(mysteryAnimal));
+	}
 
 }
 {% endhighlight %}
