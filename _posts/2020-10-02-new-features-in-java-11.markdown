@@ -136,8 +136,10 @@ public class Unicode10App {
 		// String bear = "\ud83d\udc3b";
 		int bearCodepoint = bear.codePointAt(bear.offsetByCodePoints(0, 0));
 		int something = bearCodepoint + 1;
-		char mysteryAnimal[] = { Character.highSurrogate(something), Character.lowSurrogate(something) };
-		System.out.println("Vườn thú Thủ lệ không có con này: " + String.valueOf(mysteryAnimal));
+		char mysteryAnimal[] = { Character.highSurrogate(something), 
+            Character.lowSurrogate(something) };
+		System.out.println("Vườn thú Thủ lệ không có con này: " + 
+            String.valueOf(mysteryAnimal));
 	}
 
 }
