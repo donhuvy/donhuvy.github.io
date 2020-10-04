@@ -19,6 +19,10 @@ docker info
 docker version
 docker run --rm -p 8080:80 httpd
 docker run -it ubuntu /bin/bash
+docker search alpine
+docker login
+docker pull alpine
+docker run -dit 80:8080 --name alpine:latest
 {% endhighlight %}
 
 ```
