@@ -10,7 +10,17 @@ Need install:
 
 - [Ruby gem 3.1.4](https://rubygems.org/rubygems/rubygems-3.1.4.zip)
 
-- [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio Code 1.49](https://code.visualstudio.com/)
+
+Check version of programming language, plug-in:
+
+{% highlight cmd %}
+$ ruby -v
+ruby 2.6.6p146 (2020-03-31 revision 67876) [x64-mingw32]
+
+$ gem -v
+3.1.4
+{% endhighlight %}
 
 {% highlight cmd %}
 gem install jekyll bundler
