@@ -13,12 +13,38 @@ File `pom.xml`
 {% highlight cmd %}
 docker images
 docker ps
+docker ps -a
 docker run hello-world
 docker info
 docker version
 docker run --rm -p 8080:80 httpd
 docker run -it ubuntu /bin/bash
 {% endhighlight %}
+
+```
+# Container id
+1dad9a1145b1
+46c4c116b26e
+f0660551bde3
+...
+8d658e2206b1
+```
+
+short-cut command
+
+```
+docker start 8d
+```
+
+run
+```
+docker ps
+```
+again to see the change.
+
+```
+docker attach 8
+```
 
 Some command must run in PowerShell, not work in CMD.
 
