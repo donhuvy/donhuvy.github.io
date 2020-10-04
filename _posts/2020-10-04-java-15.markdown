@@ -135,5 +135,71 @@ public class App {
 }
 {% endhighlight %}
 
+Result
+
 <img src="https://raw.githubusercontent.com/donhuvy/donhuvy.github.io/master/images/java15_print_file.png" alt="Java roadmap" class="inline"/>
+
+### Crypto support for the EdDSA Signature Algorithm
+
+```java
+package org.example;
+
+import java.math.BigInteger;
+import java.security.InvalidKeyException;
+import java.security.KeyFactory;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+import java.security.Signature;
+import java.security.SignatureException;
+import java.security.spec.EdECPoint;
+import java.security.spec.EdECPublicKeySpec;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.NamedParameterSpec;
+
+public class MyKeyPair {
+
+    public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeyException, SignatureException, InvalidKeySpecException {
+        // Generate a key pair and sign
+        KeyPairGenerator kpg = KeyPairGenerator.getInstance("Ed25519");
+        KeyPair keyPair = kpg.generateKeyPair();
+        // algorithm is pure Ed25519
+        Signature sig = Signature.getInstance("Ed25519");
+        sig.initSign(keyPair.getPrivate());
+        byte[] msg = hexStringToByteArray("e04fd020ea3a6910a2d808002b30309d");
+        sig.update(msg);
+        byte[] s = sig.sign();
+
+        // Use KeyFactory to construct a public key.
+        KeyFactory keyFactory = KeyFactory.getInstance("EdDSA");
+        boolean xOdd = true;
+        BigInteger y = new BigInteger("42");
+        NamedParameterSpec paramSpec = new NamedParameterSpec("Ed25519");
+        EdECPublicKeySpec pubSpec = new EdECPublicKeySpec(paramSpec, new EdECPoint(xOdd, y));
+        PublicKey pubKey = keyFactory.generatePublic(pubSpec);
+        System.out.println(pubKey);
+    }
+
+    public static byte[] hexStringToByteArray(String s) {
+        int len = s.length();
+        byte[] data = new byte[len / 2];
+        for (int i = 0; i < len; i += 2) {
+            data[i / 2] = (byte) ((Character.digit(s.charAt(i), 16) << 4)
+                    + Character.digit(s.charAt(i+1), 16));
+        }
+        return data;
+    }
+}
+```
+result
+
+```
+algorithm = Ed25519, unparsed keybits = 
+0000: 2A 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00  *...............
+0010: 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 80  ................
+```
+
+
+Change from Java 14 to 15: [https://javaalmanac.io/jdk/15/apidiff/14/](https://javaalmanac.io/jdk/15/apidiff/14/)
 
