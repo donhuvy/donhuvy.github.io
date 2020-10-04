@@ -1,0 +1,222 @@
+---
+layout: post
+title:  "New features in Java 15"
+date:   2020-10-04 09:45:00 +0700
+categories: java blog
+---
+New features in Java 15:
+
+### Setup development environment
+
+File `pom.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.donhuvy</groupId>
+    <artifactId>core01</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>core01</name>
+    <url>https://donhuvy.github.io</url>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>15</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-ri</artifactId>
+            <version>3.0.0-M4</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.4.0-b180830.0359</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-core</artifactId>
+            <version>3.0.0-M4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>3.0.0-M4</version>
+        </dependency>
+      <dependency>
+        <groupId>javax.activation</groupId>
+        <artifactId>activation</artifactId>
+        <version>1.1.1</version>
+      </dependency>
+      <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <source>15</source>
+                        <target>15</target>
+                        <compilerArgs>--enable-preview</compilerArgs>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.7.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
+{% endhighlight %}
+
+New way
+
+{% highlight java %}
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+public class Java10varNew {
+
+    public static void main(String[] args) throws IOException {
+        var mp = new URL("https://donhuvy.github.io/");
+        var connection = mp.openConnection();
+        var reader = new BufferedReader(new InputStreamReader(
+            connection.getInputStream()));
+    }
+
+}
+{% endhighlight %}
+
+### [Cryptography - ChaCha20-Poly1305](#cryptography---chacha20-poly1305)
+
+{% highlight java %}
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import java.nio.ByteBuffer;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+
+public class TestChaCha {
+
+    // // 96 bits, 12 bytes.
+    private static final int NONCE_LEN = 12;
+    // 128 bits, 16 bytes.
+    private static final int MAC_LEN = 16;                      
+
+    public static void main(String[] args) throws Exception {
+        String input = "Java & ChaCha20-Poly1305.";
+        ChaCha20Poly1305 cipher = new ChaCha20Poly1305();
+        // 256-bit secret key (32 bytes).
+        SecretKey key = getKey();
+        System.out.println("Input                  : " + input);
+        System.out.println("Input             (hex): " + convertBytesToHex(input.getBytes()));
+        System.out.println("\n---Encryption---");
+        byte[] cText = cipher.encrypt(input.getBytes(), key);   // encrypt
+        System.out.println("Key               (hex): " + convertBytesToHex(key.getEncoded()));
+        System.out.println("Encrypted         (hex): " + convertBytesToHex(cText));
+        System.out.println("\n---Print Mac and Nonce---");
+        ByteBuffer bb = ByteBuffer.wrap(cText);
+        // This cText contains chacha20 ciphertext + poly1305 MAC + nonce
+        // ChaCha20 encrypted the plaintext into a ciphertext of equal length.
+        byte[] originalCText = new byte[input.getBytes().length];
+        byte[] nonce = new byte[NONCE_LEN];     // 16 bytes , 128 bits
+        byte[] mac = new byte[MAC_LEN];         // 12 bytes , 96 bits
+        bb.get(originalCText);
+        bb.get(mac);
+        bb.get(nonce);
+        System.out.println("Cipher (original) (hex): " + convertBytesToHex(originalCText));
+        System.out.println("MAC               (hex): " + convertBytesToHex(mac));
+        System.out.println("Nonce             (hex): " + convertBytesToHex(nonce));
+        System.out.println("\n---Decryption---");
+        System.out.println("Input             (hex): " + convertBytesToHex(cText));
+        byte[] pText = cipher.decrypt(cText, key);              // decrypt
+        System.out.println("Key               (hex): " + convertBytesToHex(key.getEncoded()));
+        System.out.println("Decrypted         (hex): " + convertBytesToHex(pText));
+        System.out.println("Decrypted              : " + new String(pText));
+    }
+
+    private static String convertBytesToHex(byte[] bytes) {
+        StringBuilder result = new StringBuilder();
+        for (byte temp : bytes) {
+            result.append(String.format("%02x", temp));
+        }
+        return result.toString();
+    }
+
+    /**
+     * A 256-bit secret key (32 bytes).
+     *
+     * @return
+     * @throws NoSuchAlgorithmException
+     */
+    private static SecretKey getKey() throws NoSuchAlgorithmException {
+        KeyGenerator keyGen = KeyGenerator.getInstance("ChaCha20");
+        keyGen.init(256, SecureRandom.getInstanceStrong());
+        return keyGen.generateKey();
+    }
+
+}
+{% endhighlight %}
+
+
+### [Unicode 10](#unicode-10)
+
+{% highlight java %}
+public class Unicode10App {
+
+	public static void main(String[] args) {
+		String bear = "🐻";
+		// Nếu dòng trên không hiển thị trên trình soạn thảo,
+		// có thể dùng cách
+		// String bear = "\ud83d\udc3b";
+		int bearCodepoint = bear.codePointAt(bear.offsetByCodePoints(0, 0));
+		int something = bearCodepoint + 1;
+		char mysteryAnimal[] = { Character.highSurrogate(something), 
+            Character.lowSurrogate(something) };
+		System.out.println("Vườn thú Thủ lệ không có con này: " + 
+            String.valueOf(mysteryAnimal));
+	}
+
+}
+{% endhighlight %}
