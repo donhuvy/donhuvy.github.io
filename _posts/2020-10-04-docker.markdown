@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Docker"
+date:   2020-10-04 09:45:00 +0700
+categories: docker blog
+---
+Docker 19.03.13
+
+### Docker commands
+
+File `pom.xml`
+
+{% highlight cmd %}
+docker images
+docker ps
+docker run hello-world
+docker info
+docker version
+
+{% endhighlight %}
+
+Docker toolbox: [https://github.com/docker/toolbox/releases/download/v19.03.1/DockerToolbox-19.03.1.exe](https://github.com/docker/toolbox/releases/download/v19.03.1/DockerToolbox-19.03.1.exe)
+
