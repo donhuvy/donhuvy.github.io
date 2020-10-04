@@ -16,8 +16,11 @@ docker ps
 docker run hello-world
 docker info
 docker version
-
+docker run --rm -p 8080:80 httpd
+docker run -it ubuntu /bin/bash
 {% endhighlight %}
+
+Some command must run in PowerShell, not work in CMD.
 
 Docker toolbox: [https://github.com/docker/toolbox/releases/download/v19.03.1/DockerToolbox-19.03.1.exe](https://github.com/docker/toolbox/releases/download/v19.03.1/DockerToolbox-19.03.1.exe)
 
