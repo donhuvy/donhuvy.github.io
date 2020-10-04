@@ -139,6 +139,25 @@ Result
 
 <img src="https://raw.githubusercontent.com/donhuvy/donhuvy.github.io/master/images/java15_print_file.png" alt="Java roadmap" class="inline"/>
 
+### Check sourve version
+
+```java
+package org.example;
+
+import javax.lang.model.SourceVersion;
+
+public class ShowInfo {
+
+    public static void main(String[] args) {
+        System.out.println("Version: " + SourceVersion.RELEASE_15);
+    }
+    
+}
+
+// Result:
+// Version: RELEASE_15
+```
+
 ### Crypto support for the EdDSA Signature Algorithm
 
 ```java
