@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to install GitHub pages"
-date:   2020-09-12 11:45:00 +0700
+date:   2020-10-04 08:45:00 +0700
 categories: github blog
 ---
 Need install:
@@ -19,4 +19,4 @@ cd myblog
 bundle exec jekyll serve
 {% endhighlight %}
 
-go to http://localhost:4000
+go to [http://localhost:4000](http://localhost:400)
