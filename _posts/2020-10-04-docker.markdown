@@ -54,3 +54,23 @@ Some command must run in PowerShell, not work in CMD.
 
 Docker toolbox: [https://github.com/docker/toolbox/releases/download/v19.03.1/DockerToolbox-19.03.1.exe](https://github.com/docker/toolbox/releases/download/v19.03.1/DockerToolbox-19.03.1.exe)
 
+and
+
+```
+docker pull tomcat
+docker run -it tomcat
+docker ps -a
+docker inspect -f '{{json .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 5e55df1c76bb
+
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 5e55df1c76bb
+
+docker inspect 5e55df1c76bb
+
+docker inspect --format="{{json .NetworkSettings.Networks}}"  5e55df1c76bb
+
+172.17.0.2
+
+docker image rm tomcat --force
+docker image rm hello-world --force
+docker container stop 2e
+```
