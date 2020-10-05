@@ -2,7 +2,7 @@
 layout: post
 title:  "Run Tomcat in Docker"
 date:   2020-10-06 00:22:00 +0700
-categories: gRPC blog spring-boot
+categories: Tomcat Docker Java
 ---
 Run Tomcat in Docker
 
