@@ -14,7 +14,7 @@ mv webapps.dist/ webapps
 exit
 ```
 
-From web browser, go to: http://localhost:8080
+From web browser, go to: [http://localhost:8080](http://localhost:8080/)
 
 <!-- 
 {% highlight xml %}
