@@ -33,14 +33,10 @@ telnet localhost 6379
 
 Telnet, type `PING` then press Enter key (you will not see text), then see result: `PONG`. Type `quit` to exit.
 
+At folder where has file `docker-compose.yml` , type command:
+
 ```cmd
-Microsoft Windows [Version 10.0.19041.508]
-(c) 2020 Microsoft Corporation. All rights reserved.
-
-D:\docker>docker-compose stop redis
-Stopping docker_redis_1 ... done
-
-D:\docker>
+docker-compose stop redis
 ```
 See what is running
 
