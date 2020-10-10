@@ -31,7 +31,38 @@ telnet localhost 6379
 
 <img src="https://raw.githubusercontent.com/donhuvy/donhuvy.github.io/master/images/install_telnet.png" alt="Instll telnet" class="inline"/>
 
-Telnet, type `PING` then press Enter key (you will not see text), then see result: `PONG`.
+Telnet, type `PING` then press Enter key (you will not see text), then see result: `PONG`. Type `quit` to exit.
+
+```cmd
+Microsoft Windows [Version 10.0.19041.508]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+D:\docker>docker-compose stop redis
+Stopping docker_redis_1 ... done
+
+D:\docker>
+```
+See what is running
+
+```cmd
+docker container ls
+```
+You will see, docker redis was stoped.
+
+```
+docker image prune -a
+docker-compose up
+```
+
+Docker RedisInsight
+
+```
+docker run -v redisinsight:/db -p 8001:8001 redislabs/redisinsight:latest
+```
+Wait about 6 minutes (at internet speed at 22:30) for downloading, unzip, install, starting.
+
+
+go to: [http://localhost:8001/](http://localhost:8001/) (auto open web browser)
 
 <!-- 
 {% highlight xml %}
