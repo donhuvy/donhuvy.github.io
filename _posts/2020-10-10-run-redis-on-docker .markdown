@@ -31,6 +31,8 @@ telnet localhost 6379
 
 <img src="https://raw.githubusercontent.com/donhuvy/donhuvy.github.io/master/images/install_telnet.png" alt="Instll telnet" class="inline"/>
 
+Telnet, type `PING` then press Enter key (you will not see text), then see result: `PONG`.
+
 <!-- 
 {% highlight xml %}
 
