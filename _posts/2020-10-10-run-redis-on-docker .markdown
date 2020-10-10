@@ -60,6 +60,8 @@ Wait about 6 minutes (at internet speed at 22:30) for downloading, unzip, instal
 
 go to: [http://localhost:8001/](http://localhost:8001/) (auto open web browser)
 
+You also maybe want use Redis for Windows (not official support: https://github.com/MicrosoftArchive/redis/releases/download/win-3.0.504/Redis-x64-3.0.504.msi)
+
 <!-- 
 {% highlight xml %}
 
