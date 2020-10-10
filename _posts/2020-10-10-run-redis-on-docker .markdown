@@ -29,7 +29,7 @@ docker container ls
 telnet localhost 6379
 ```
 
-<img src="https://raw.githubusercontent.com/donhuvy/donhuvy.github.io/master/images/install-telnet.png" alt="Java roadmap" class="inline"/>
+<img src="https://raw.githubusercontent.com/donhuvy/donhuvy.github.io/master/images/install_telnet.png" alt="Instll telnet" class="inline"/>
 
 <!-- 
 {% highlight xml %}
