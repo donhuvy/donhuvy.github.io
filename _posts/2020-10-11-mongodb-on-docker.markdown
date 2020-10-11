@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MongoDB on Docker"
-date:   2020-10-10 22:21:00 +0700
+date:   2020-10-11 15:42:00 +0700
 categories: Redis Docker
 ---
 MongoDB in Docker
