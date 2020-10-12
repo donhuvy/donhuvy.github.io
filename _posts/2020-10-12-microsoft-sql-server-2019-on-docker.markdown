@@ -19,12 +19,12 @@ Command
 ```
 docker pull mcr.microsoft.com/mssql/server:2019-latest
 
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=123456a@' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=123456a@" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 
 docker logs -f 1b2ce04432883df593535157999ae3d2996620155b71e0e1d9fd25e8b2e60628
 ```
 
-Document: (https://hub.docker.com/_/microsoft-mssql-server)[https://hub.docker.com/_/microsoft-mssql-server]
+Document: [https://hub.docker.com/_/microsoft-mssql-server](https://hub.docker.com/_/microsoft-mssql-server)
 
 
 Example: Use NodeJS 14.13.11 , NPM 6.14.8 (latest tools at Oct 12th, 2020)
