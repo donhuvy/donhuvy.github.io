@@ -18,4 +18,8 @@ Command
 
 ```
 docker pull mcr.microsoft.com/mssql/server:2019-latest
+
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=123456a@' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
+
+Document: [https://hub.docker.com/_/microsoft-mssql-server](https://hub.docker.com/_/microsoft-mssql-server)
