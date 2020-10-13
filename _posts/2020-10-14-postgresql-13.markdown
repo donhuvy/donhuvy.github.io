@@ -6,7 +6,10 @@ categories: SQL PostgreSQL
 ---
 PostgreSQL 13
 
+Sample database: [https://github.com/jOOQ/jOOQ/tree/main/jOOQ-examples/Sakila/postgres-sakila-db](https://github.com/jOOQ/jOOQ/tree/main/jOOQ-examples/Sakila/postgres-sakila-db)
+
 ```sql
 SELECT '2020-10-14 06:10'::timestamp;
 SELECT '2020-10-14 06:10'::timestamptz;
+SELECT * FROM UNNEST('cat:3 fat:2,4 rat:5A'::tsvector);
 ```
