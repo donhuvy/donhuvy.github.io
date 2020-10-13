@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "PostgreSQL 13"
+date:   2020-10-14 06:09:00 +0700
+categories: SQL PostgreSQL
+---
+PostgreSQL 13
+
+```sql
+SELECT '2020-10-14 06:10'::timestamp;
+SELECT '2020-10-14 06:10'::timestamptz;
+```
