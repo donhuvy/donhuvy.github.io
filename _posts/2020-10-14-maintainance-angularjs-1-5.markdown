@@ -74,7 +74,7 @@ File `todo.css`
 File `index.html`
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html ng-app="todoApp">
 
 <head>
@@ -98,7 +98,7 @@ File `index.html`
         </ul>
         <form ng-submit="todoList.addTodo()">
             <input type="text" ng-model="todoList.todoText" size="30" placeholder="add new todo here">
-            <input class="btn-primary" type="submit" value="add">
+            <input class="btn-primary" type="submit" value="Add">
         </form>
     </div>
 </body>
