@@ -16,4 +16,8 @@ Shortcut keys in Eclipse IDE 2020-09
 | 6  | Ctrl + P | Print, no wrap source code |
 | 7  | Alt + Shift + Y | Word wrap |
 | 8  | Ctrl + A | Select all |
-| 9  | Ctrl + Alt + Shift + L | Quick search |
+| 9  | Ctrl + Alt + Shift + L | Quick search. Tip: select word, it will fill this word |
+| 10  | Ctrl + Shift + G | Find references in workspace |
+| 11  | Ctrl + Alt + Right | Go to last edited position |
+| 12  | Ctrl + 3 | Find action |
+| 13  | F1 | See help |
