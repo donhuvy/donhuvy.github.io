@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Shortcut keys in Eclipse IDE 2020-09"
-date:   2020-10-15 11:20:00 +0700
+title:  "Shortcut keys in Visual Studio Code"
+date:   2020-10-15 14:23:00 +0700
 categories: Java Eclipse
 ---
-Shortcut keys in Eclipse IDE 2020-09
+Shortcut keys in Visual Studio Code
 
 | No.| Shortcut keys   | Description  |
 | ---- |:-------------| :-----|
-| 1  | Ctrl + Shift + R | Quick open file |
-| 2  | Alt + Shift + Q, O      |   Open outline |
-| 3  | Ctrl + G      |    Choose word or place cursor, then Ctrl + G for finding. |
+| 1  | Ctrl + P | Quick open file |
+| 2  | Ctrl + N      |   New file |
+| 3  | Ctrl + K, Ctrl + O      |    Open folder |
 | 4  | Ctrl + Shift + S | Save all |
 | 5  | Alt + Enter | Place cursor at file, press combined key, see properties of file |
 | 6  | Ctrl + P | Print, no wrap source code |
