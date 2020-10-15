@@ -12,3 +12,8 @@ Shortcut keys in Eclipse IDE 2020-09
 | 2  | Alt + Shift + Q, O      |   Open outline |
 | 3  | Ctrl + G      |    Choose word or place cursor, then Ctrl + G for finding. |
 | 4  | Ctrl + Shift + S | Save all |
+| 5  | Alt + Enter | Place cursor at file, press combined key, see properties of file |
+| 6  | Ctrl + P | Print, no wrap source code |
+| 7  | Alt + Shift + Y | Word wrap |
+| 8  | Ctrl + A | Select all |
+| 9  | Ctrl + Alt + Shift + L | Quick search |
