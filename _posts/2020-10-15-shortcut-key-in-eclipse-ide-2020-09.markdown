@@ -6,6 +6,9 @@ categories: Java Eclipse
 ---
 Shortcut keys in Eclipse IDE 2020-09
 
-Ctrl + Shift + R: Quick open file.
-Alt + Shift + Q, O: Open outline.
-Choose word or place cursor, then Ctrl + G for finding.
+| No.        | Shortcut keys          | Description  |
+| ------------- |:-------------:| -----:|
+| 1     | Ctrl + Shift + R | Quick open file |
+| 2      | Alt + Shift + Q, O      |   Open outline |
+| 3 | Ctrl + G      |    Choose word or place cursor, then Ctrl + G for finding. |
+| Ctrl + Shift + S | Save all |
