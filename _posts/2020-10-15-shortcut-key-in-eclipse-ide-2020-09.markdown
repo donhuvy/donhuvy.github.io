@@ -20,11 +20,12 @@ Shortcut keys in Eclipse IDE 2020-09
 | 10  | Ctrl + Shift + G | Find references in workspace |
 | 11  | Ctrl + Alt + Right | Go to last edited position |
 | 12  | Ctrl + 3 | Find action |
-| 13  | F8 | Debug |
+| 13  | F8 | Debug, Next break-point |
 | 14  | F5 | Debug into |
 | 15  | F6 | Debug next |
 | 16  | F7 | Debug out|
 | 17  | Ctrl + Shift + B | Place break-point |
 | 18  | Alt + Shift + D, J | Debug Java application |
-| 13  | F1 | See help |
+| 19  | Ctrl + F2 | Terminal debug process |
+| 20  | F1 | See help |
 
