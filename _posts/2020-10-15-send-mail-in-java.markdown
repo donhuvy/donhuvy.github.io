@@ -157,7 +157,7 @@ public class TestMail {
 			Session session = Session.getInstance(imapProps, null);
 			store = new IMAPSSLStore(session, url);
 			store.connect();
-			System.out.println("Thành công!");
+			System.out.println("Declaring parameter for get mail success!");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
