@@ -166,3 +166,5 @@ public class TestMail {
 
 }
 ```
+
+For AWS WorkMail: [https://docs.aws.amazon.com/workmail/latest/userguide/using_IMAP.html](https://docs.aws.amazon.com/workmail/latest/userguide/using_IMAP.html)
