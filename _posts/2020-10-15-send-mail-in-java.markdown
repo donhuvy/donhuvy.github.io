@@ -127,3 +127,42 @@ When check email `donhuvy2014@gmail.com` Folder `Sent` , and check email `vydn@m
 List properties of SMTP: [https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html](https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html)
 
 List properties of IMAP: [https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html](https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html)
+
+For get email from inbox server (AWS WorkMail)
+
+```java
+package com.example;
+
+import java.util.Properties;
+
+import javax.mail.Session;
+import javax.mail.Store;
+import javax.mail.URLName;
+
+import com.sun.mail.imap.IMAPSSLStore;
+
+public class TestMail {
+
+	public static void main(String[] args) {
+		Store store = null;
+		try {
+			Properties imapProps = new Properties();
+			imapProps.setProperty("mail.imap.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+			imapProps.setProperty("mail.imap.socketFactory.fallback", "false");
+			imapProps.setProperty("mail.imap.partialfetch", "false");
+			imapProps.put("mail.smtp.connectiontimeout", "180000");
+			imapProps.put("mail.smtp.timeout", "180000");
+			URLName url = new URLName("IMAP", "imap.mail.us-east-1.awsapps.com", 993, "", "vydn@mpsolutions.io",
+					"SecRET");
+			Session session = Session.getInstance(imapProps, null);
+			store = new IMAPSSLStore(session, url);
+			store.connect();
+			System.out.println("Thành công!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		// return store;
+	}
+
+}
+```
