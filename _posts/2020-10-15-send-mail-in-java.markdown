@@ -124,9 +124,11 @@ public class App {
 
 When check email `donhuvy2014@gmail.com` Folder `Sent` , and check email `vydn@mpsolutions.io` folder `Inbox`; you will see email message.
 
-List properties of SMTP: [https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html](https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html)
+List properties of 
 
-List properties of IMAP: [https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html](https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html)
+- SMTP: [https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html](https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html)
+- IMAP: [https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html](https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html)
+- POP3: [https://javaee.github.io/javamail/docs/api/com/sun/mail/pop3/package-summary.html](https://javaee.github.io/javamail/docs/api/com/sun/mail/pop3/package-summary.html)
 
 For get email from inbox server (AWS WorkMail)
 
