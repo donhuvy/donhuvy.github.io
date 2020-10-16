@@ -25,6 +25,6 @@ Shortcut keys in Eclipse IDE 2020-09
 | 15  | F6 | Debug next |
 | 16  | F7 | Debug out|
 | 17  | Ctrl + Shift + B | Place break-point |
-| 18  | F1 | See help |
+| 18  | Alt + Shift + D, R | Debug Java application |
 | 13  | F1 | See help |
 
