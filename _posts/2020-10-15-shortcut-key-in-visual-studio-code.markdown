@@ -12,7 +12,7 @@ Shortcut keys in Visual Studio Code
 | 2  | Ctrl + N      |   New file |
 | 3  | Ctrl + K, Ctrl + O      |    Open folder |
 | 4  | Ctrl + Shift + S | Save all |
-| 5  | Alt + Enter | Place cursor at file, press combined key, see properties of file |
+| 5  | Alt + F | Find |
 | 6  | Ctrl + P | Print, no wrap source code |
 | 7  | Alt + Shift + Y | Word wrap |
 | 8  | Ctrl + A | Select all |

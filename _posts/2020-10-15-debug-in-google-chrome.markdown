@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Shortcut keys in Eclipse IDE 2020-09"
+title:  "Debug in Google Chrome"
 date:   2020-10-15 11:20:00 +0700
 categories: Java Eclipse
 ---
-Shortcut keys in Eclipse IDE 2020-09
+Debug in Google Chrome
 
 | No.| Shortcut keys   | Description  |
 | ---- |:-------------| :-----|
-| 1  | Ctrl + Shift + R | Quick open file |
-| 2  | Alt + Shift + Q, O      |   Open outline |
+| 1  | F11 | Debug Next line |
+| 2  | Shift + 11 | Debug out |
 | 3  | Ctrl + G      |    Choose word or place cursor, then Ctrl + G for finding. |
 | 4  | Ctrl + Shift + S | Save all |
 | 5  | Alt + Enter | Place cursor at file, press combined key, see properties of file |
@@ -24,7 +24,7 @@ Shortcut keys in Eclipse IDE 2020-09
 | 14  | F5 | Debug into |
 | 15  | F6 | Debug next |
 | 16  | F7 | Debug out|
-| 17  | Ctrl + Shift + B | Place break-point |
+| 17  | F1 | See help |
 | 18  | F1 | See help |
 | 13  | F1 | See help |
 
