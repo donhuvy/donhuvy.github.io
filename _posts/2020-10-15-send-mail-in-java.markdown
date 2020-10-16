@@ -124,6 +124,6 @@ public class App {
 
 When check email `donhuvy2014@gmail.com` Folder `Sent` , and check email `vydn@mpsolutions.io` folder `Inbox`; you will see email message.
 
-List properties of SMTP: https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html
+List properties of SMTP: [https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html](https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html)
 
-List properties of IMAP: https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html
+List properties of IMAP: [https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html](https://javaee.github.io/javamail/docs/api/com/sun/mail/imap/package-summary.html)
