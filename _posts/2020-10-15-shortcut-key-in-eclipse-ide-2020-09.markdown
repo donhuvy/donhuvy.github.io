@@ -26,6 +26,6 @@ Shortcut keys in Eclipse IDE 2020-09
 | 16  | F7 | Debug out|
 | 17  | Ctrl + Shift + B | Place break-point |
 | 18  | Alt + Shift + D, J | Debug Java application |
-| 19  | Ctrl + F2 | Terminal debug process |
+| 19  | Ctrl + F2 | Terminal (stop) debug process |
 | 20  | F1 | See help |
 
