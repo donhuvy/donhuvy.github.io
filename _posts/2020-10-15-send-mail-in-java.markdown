@@ -81,6 +81,7 @@ File `pom.xml`
 	</build>
 </project>
 ```
+Must enable Gmail less secure app: [https://myaccount.google.com/lesssecureapps](https://myaccount.google.com/lesssecureapps)
 
 
 ```java
