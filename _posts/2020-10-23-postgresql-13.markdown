@@ -154,7 +154,7 @@ SELECT warehouse_id, warehouse_name FROM warehouse_tbl WHERE warehouse_name = 'B
 
 ```
 
-Next steps
+Constraint: `UNIQUE` , `NOT NULL`
 
 ```sql
 CREATE TABLE tools
@@ -185,6 +185,16 @@ CREATE TABLE tools
     tool_name TEXT NOT NULL,
     tool_class NUMERIC
 );
+```
 
+Exclusion constraint
 
+```sql
+CREATE TABLE movies
+(
+    Title TEXT,
+    Copies INTEGER
+);
+
+ALTER TABLE movies ADD EXCLUDE (title WITH=, copies WITH=);
 ```
