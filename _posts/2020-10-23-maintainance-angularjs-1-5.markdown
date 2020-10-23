@@ -106,7 +106,7 @@ File `index.html`
 </html>
 ```
 
-Example 2.
+### Example 2: `ng-app` in specific 
 
 ```html
 <!DOCTYPE html>
@@ -132,7 +132,7 @@ Display: <div>{{name}}</div>
 </html>
 ```
 
-Example 3
+### Example 3: `ng-app` in HTML element
 
 ```html
 <!DOCTYPE html>
@@ -160,3 +160,72 @@ Display: <div>{{name}}</div>
 
 ![result](/images/2020_10_23_angularjs_01.png)
 
+### Example 4: Module and controller
+
+File `intro.html`
+
+```html
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>-->
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+<div ng-controller="myController">
+    {{message}}
+</div>
+</body>
+</html>
+```
+
+File `app.js`
+
+```javascript
+var myApp = angular.module('myModule', []);
+
+myApp.controller('myController', myController);
+
+function myController($scope) {
+    $scope.message = "Angular JS Application";
+}
+```
+
+### Example 5: `ng-app` and `ng-controller`
+
+File `app.js`
+
+```javascript
+var myApp = angular.module('myModule', []);
+
+myApp.controller('myController', myController);
+
+// create a module.
+function myController($scope) {
+    $scope.message = "Angular JS Application";
+}
+```
+
+```html
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>-->
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body ng-controller="myController">
+<div>
+    {{message}}
+</div>
+<div>
+    {{message}}
+</div>
+</body>
+</html>
+```
