@@ -14,3 +14,15 @@ SELECT TIMESTAMP '2020-10-14 06:17:40' AT TIME ZONE 'America/Denver';
 select CURRENT_TIME;
 select LOCALTIME;
 ```
+
+Set environment variables
+
+```
+D:\Program Files\PostgreSQL\13\bin
+```
+
+Login
+
+```
+psql -U postgres
+```
