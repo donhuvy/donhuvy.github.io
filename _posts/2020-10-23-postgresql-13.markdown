@@ -148,4 +148,43 @@ VALUES
     4321
 );
 
+DELETE FROM warehouse_tbl WHERE warehouse_name = 'Bill & Co';
+
+SELECT warehouse_id, warehouse_name FROM warehouse_tbl WHERE warehouse_name = 'Bill & Co';
+
+```
+
+Next steps
+
+```sql
+CREATE TABLE tools
+(
+    tool_id INTEGER UNIQUE,
+    tool_name TEXT,
+    tool_class NUMERIC
+);
+
+CREATE TABLE tools
+(
+    tool_id INTEGER,
+    tool_name TEXT,
+    tool_class NUMERIC,
+    UNIQUE (tool_id)
+);
+
+CREATE TABLE tools
+(
+    tool_id INTEGER NOT NULL,
+    tool_name TEXT,
+    tool_class NUMERIC
+);
+
+CREATE TABLE tools
+(
+    tool_id INTEGER NOT NULL,
+    tool_name TEXT NOT NULL,
+    tool_class NUMERIC
+);
+
+
 ```
