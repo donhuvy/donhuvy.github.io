@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Maintainence AngularJS 1.5"
-date:   2020-10-14 06:09:00 +0700
+date:   2020-10-23 13:51:00 +0700
 categories: JavaScript AngularJS
 ---
 Maintainence AngularJS 1.5
@@ -103,5 +103,57 @@ File `index.html`
     </div>
 </body>
 
+</html>
+```
+
+Example 2.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body>
+Input name: <input type="text" ng-model="name"/><br/>
+Display: <div>{{name}}</div>
+
+<div>
+    10 + 20 = {{10 + 20}}
+</div>
+
+<div ng-app>
+    10 + 20 = {{10 + 20}}
+</div>
+
+</body>
+</html>
+```
+
+Example 3
+
+```html
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body>
+Input name: <input type="text" ng-model="name"/><br/>
+Display: <div>{{name}}</div>
+
+<div>
+    10 + 20 = {{10 + 20}}
+</div>
+
+<div>
+    10 + 20 = {{10 + 20}}
+</div>
+
+</body>
 </html>
 ```
