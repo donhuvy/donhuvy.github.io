@@ -278,3 +278,8 @@ other syntax
     Gender: {{employee.Gender}}<br/>
 </div>
 ```
+
+![result](/images/2020_10_23_angularjs_02.png)
+
+
+
