@@ -33,4 +33,18 @@ sample
 CREATE DATABASE warehouse_db;
 \c warehouse_db
 CREATE SCHEMA record;
+
+CREATE TABLE warehouse_tbl
+(
+    warehouse_id INTEGER NOT NULL,
+    warehouse_name TEXT NOT NULL,
+    year_created INTEGER,
+    street_address TEXT,
+    city CHARACTER VARYING(100),
+    state CHARACTER VARYING(2),
+    zip CHARACTER VARYING(10),
+    CONSTRAINT "PRIM_KEY" PRIMARY KEY (warehouse_id)
+);
+
+select * from warehouse_tbl;
 ```
