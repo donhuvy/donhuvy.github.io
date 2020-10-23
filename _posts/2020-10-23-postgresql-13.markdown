@@ -51,4 +51,101 @@ CREATE TABLE warehouse_tbl
 );
 
 select * from warehouse_tbl;
+
+CREATE SEQUENCE hist_id_seq;
+
+CREATE TABLE history
+(
+    history_id INTEGER NOT NULL DEFAULT nextval('hist_id_seq'),
+    date TIMESTAMP WITHOUT TIME ZONE,
+    amount INTEGER,
+    data TEXT,
+    customer_id INTEGER,
+    warehouse_id INTEGER,
+    CONSTRAINT "PRM_KEY" PRIMARY KEY (history_id),
+    CONSTRAINT "FORN_KEY"
+    FOREIGN KEY (warehouse_id)
+    REFERENCES warehouse_tbl (warehouse_id)
+);
+
+ALTER TABLE warehouse_tbl ADD COLUMN phone_no INTEGER;
+
+ALTER TABLE warehouse_tbl DROP COLUMN phone_no;
+
+TRUNCATE TABLE warehouse_tbl;
+
+SELECT COUNT(*) FROM warehouse_tbl;
+
+INSERT INTO warehouse_tbl
+(
+    warehouse_id,
+    warehouse_name,
+    year_created,
+    street_address,
+    city,
+    state,
+    zip
+)
+VALUES
+(
+    1,
+    'Mark Corp',
+    2009,
+    '207-F Main Service Road East',
+    'New London',
+    'CT',
+    4321
+);
+
+SELECT 
+    warehouse_id,
+    warehouse_name,
+    street_address
+FROM
+    warehouse_tbl;
+
+UPDATE warehouse_tbl SET year_created = 2010 WHERE year_created = 2009;
+
+INSERT INTO warehouse_tbl
+(
+    warehouse_id,
+    warehouse_name,
+    year_created,
+    street_address,
+    city,
+    state,
+    zip
+)
+VALUES
+(
+    2,
+    'Bill & Co',
+    2014,
+    'Lilly Road',
+    'New London',
+    'CT',
+    4321
+);
+
+INSERT INTO warehouse_tbl
+(
+    warehouse_id,
+    warehouse_name,
+    year_created,
+    street_address,
+    city,
+    state,
+    zip
+)
+VALUES
+(
+    3,
+    'West point',
+    2013,
+    'Down Town',
+    'New London',
+    'CT',
+    4321
+);
+
 ```
