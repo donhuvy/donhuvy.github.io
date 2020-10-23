@@ -157,3 +157,6 @@ Display: <div>{{name}}</div>
 </body>
 </html>
 ```
+
+![result](/images/2020_10_23_angularjs_01.png)
+
