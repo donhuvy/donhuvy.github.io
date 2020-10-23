@@ -268,3 +268,13 @@ myApp.controller('myController', function ($scope){
     $scope.employee = employee;
 });
 ```
+
+other syntax
+
+```html
+<div>
+    First Name: <input type="text" value="{{employee.FirstName}}"><br/>
+    Last Name: {{employee.LastName}}<br/>
+    Gender: {{employee.Gender}}<br/>
+</div>
+```
