@@ -229,3 +229,42 @@ function myController($scope) {
 </body>
 </html>
 ```
+
+### Example 6: Binding
+
+File `intro.html`
+
+```html
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>-->
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body ng-controller="myController">
+<div>
+    First Name: <input type="text" value="{{employee.FirstName}}"><br/>
+    Last Name: {{employee.LastName}}<br/>
+    Gender: {{employee.Gender}}<br/>
+</div>
+</body>
+</html>
+```
+
+File `app.js`
+
+```js
+var myApp = angular.module('myModule', []);
+
+myApp.controller('myController', function ($scope){
+    var employee = {
+        FirstName: "Mark",
+        LastName: "Hastings",
+        Gender: "Male"
+    }
+    $scope.employee = employee;
+});
+```
