@@ -281,5 +281,16 @@ other syntax
 
 ![result](/images/2020_10_23_angularjs_02.png)
 
+other syntax
 
+```js
+var myApp = angular.module('myModule', []).controller('myController', function ($scope) {
+    var employee = {
+        FirstName: "Vy",
+        LastName: "Donhu",
+        Gender: "Male"
+    }
+    $scope.employee = employee;
+});
+```
 
