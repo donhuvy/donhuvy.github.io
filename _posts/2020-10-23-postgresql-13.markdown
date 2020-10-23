@@ -33,7 +33,11 @@ sample
 CREATE DATABASE warehouse_db;
 \c warehouse_db
 CREATE SCHEMA record;
+```
+Use pgAdmin 4
 
+```sql
+set schema 'record';
 CREATE TABLE warehouse_tbl
 (
     warehouse_id INTEGER NOT NULL,
