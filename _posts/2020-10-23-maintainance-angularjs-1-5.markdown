@@ -294,3 +294,53 @@ var myApp = angular.module('myModule', []).controller('myController', function (
 });
 ```
 
+### Example 7: Scope
+
+File `app.js`
+
+```js
+var myApp = angular.module('scopeDemo', []);
+myApp.controller('classController', classController);
+myApp.controller('schoolController', schoolController);
+myApp.controller('topController', topController);
+
+function classController($scope) {
+
+};
+
+function schoolController($scope) {
+    $scope.name = "Child Controller";
+}
+
+function topController($scope, $rootScope) {
+    $scope.name = "This is nested scope AngularJS";
+}
+```
+
+File `intro.html`
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>-->
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body ng-app="scopeDemo">
+<div ng-controller="topController">
+    <div ng-controller="classController">
+        <div>{{name}}</div>
+    </div>
+    <div ng-controller="schoolController">
+        <div>{{name}}</div>
+    </div>
+    {{name}}
+</div>
+</body>
+</html>
+```
+
+![result](/images/2020_10_23_angularjs_03.png)
