@@ -26,3 +26,11 @@ Login
 ```
 psql -U postgres
 ```
+
+sample
+
+```sql
+CREATE DATABASE warehouse_db;
+\c warehouse_db
+CREATE SCHEMA record;
+```
