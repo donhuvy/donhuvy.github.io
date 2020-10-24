@@ -317,3 +317,27 @@ select session_user;
 ```
 
 Configuration `"D:\Program Files\PostgreSQL\13\share\pg_hba.conf.sample"`
+
+```
+\timing
+\d
+\a
+\c
+\e
+
+```
+
+```sql
+explain select * from actor;
+create database petshop;
+
+CREATE TABLE dogs
+(
+    dog_id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    age INTEGER NOT NULL,
+    weight INTEGER NOT NULL
+);
+
+INSERT INTO dogs(name, age, weight) VALUES ('Rover', 3, 35);
+```
