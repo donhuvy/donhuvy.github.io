@@ -198,3 +198,98 @@ CREATE TABLE movies
 
 ALTER TABLE movies ADD EXCLUDE (title WITH=, copies WITH=);
 ```
+
+Primary key constraint
+
+```sql
+CREATE TABLE tools
+(
+    tool_id INTEGER PRIMARY KEY,
+    tool_game TEXT,
+    tool_class NUMERIC
+);
+
+-- or other case
+CREATE TABLE tools
+(
+    tool_id INTEGER,
+    tool_name TEXT,
+    tool_class NUMERIC,
+    PRIMARY KEY (tool_id, tool_name)
+);
+```
+
+Foreign key
+
+```sql
+CREATE TABLE tools
+(
+    tool_id INTEGER PRIMARY KEY,
+    tool_name TEXT,
+    tool_class NUMERIC
+);
+
+CREATE TABLE tools_list
+(
+    list_id INTEGER PRIMARY KEY,
+    tool_id INTEGER REFERENCES tools (tool_id),
+    list_name TEXT
+);
+```
+
+Check constraints
+
+```sql
+CREATE TABLE tools
+(
+    tool_id INTEGER PRIMARY KEY,
+    tool_name TEXT,
+    tool_class NUMERIC,
+    tool_quantity NUMERIC CHECK (tool_quantity > 0)
+);
+
+-- or
+CREATE TABLE tools
+(
+    tool_id INTEGER PRIMARY KEY,
+    tool_name TEXT,
+    tool_class NUMERIC,
+    tool_quantity NUMERIC
+    CONSTRAINT positive_quantity CHECK (tool_quantity > 0)
+);
+```
+
+#### PLV8
+
+```sql
+CREATE FUNCTION plv8_test(keys TEXT[], vals TEXT[]) RETURNS JSON AS $
+    var o = {};
+    for (var i = 0; i < keys.length; i++) {
+        o[keys[i]] = vals[i];
+    }
+    return o;
+$ LANGUAGE plv8 IMMUTABLE STRICT;
+```
+run
+
+```
+SELECT plv8_test(ARRAY['name', 'age'], ARRAY['Tom', '29']);
+```
+
+```sql
+CREATE function concat_lower_or_upper(a text, b text, uppercase boolean DEFAULT false)
+RETURNS text
+AS
+$$
+    SELECT CASE
+        WHEN $3 THEN UPPER($1 || ' ' || $2)
+        ELSE LOWER($1 || ' ' || $2)
+        END;
+$$
+LANGUAGE SQL IMMUTABLE STRICT;        
+```
+use
+
+```sql
+SELECT concat_lower_or_upper('Hello', 'World', true);
+```
