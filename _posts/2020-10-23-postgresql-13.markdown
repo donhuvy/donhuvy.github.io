@@ -308,3 +308,12 @@ Mixed notation
 ```sql
 SELECT concat_lower_or_upper('Hello', 'World', uppercase => true);
 ```
+
+### Security
+
+```
+select pg_reload_conf();
+select session_user;
+```
+
+Configuration `"D:\Program Files\PostgreSQL\13\share\pg_hba.conf.sample"`
