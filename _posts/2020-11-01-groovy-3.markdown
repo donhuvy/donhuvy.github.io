@@ -43,3 +43,9 @@ println(Long.MIN_VALUE - 1)
 def ne = -9223372036854775809
 assert ne instanceof BigInteger
 ```
+
+[https://www.oodesign.com/](https://www.oodesign.com/)
+
+[https://github.com/adamldavis](https://github.com/adamldavis)
+
+[https://github.com/adamldavis/learning-groovy](https://github.com/adamldavis/learning-groovy)
