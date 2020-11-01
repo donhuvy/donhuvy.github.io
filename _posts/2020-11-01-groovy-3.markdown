@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Groovy 3.0.3"
+date:   2020-11-01 19:30:00 +0700
+categories: groovy java
+---
+Groovy 3.0.3
+
+```groovy
+byte b = 1
+char c = 2
+short s = 3
+int i = 4
+long l = 5
+BigInteger bi = 6
+
+def a = 1
+assert a instanceof Integer
+
+def bb = 23433434
+assert bb instanceof Integer
+
+def cc = 343333355000034
+assert cc instanceof Long
+
+def max_int = Integer.MAX_VALUE
+def max_long = Long.MAX_VALUE
+
+def ee = 45438866567890887654433
+assert ee instanceof BigInteger
+
+def so_am = -1987
+assert so_am instanceof Integer
+
+def so_am_1 = -434335454
+assert so_am_1 instanceof Integer
+
+def so_am_2 = -34345544444
+assert so_am_2 instanceof Long
+
+println(Long.MIN_VALUE - 1)
+
+def ne = -9223372036854775809
+assert ne instanceof BigInteger
+```
