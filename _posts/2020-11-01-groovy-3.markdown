@@ -44,6 +44,37 @@ def ne = -9223372036854775809
 assert ne instanceof BigInteger
 ```
 
+File `currency.groovy`
+
+```groovy
+println Currency.getAvailableCurrencies();
+
+String pound = Currency.getInstance(Locale.UK).getSymbol()
+String dollar = Currency.getInstance(Locale.US).getSymbol()
+
+println ''
+println pound
+println dollar
+```
+
+File `DateTimes.groovy`
+
+```groovy
+import groovy.time.TimeCategory
+
+now = new Date()
+println now
+
+println now + 5
+
+use(TimeCategory){
+    nextWeekPlusTenHours = now + 1.week + 10.hours - 10.seconds
+}
+
+println nextWeekPlusTenHours
+```
+
+
 [https://www.oodesign.com/](https://www.oodesign.com/)
 
 [https://github.com/adamldavis](https://github.com/adamldavis)
