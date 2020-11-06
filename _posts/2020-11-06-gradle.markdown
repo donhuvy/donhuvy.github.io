@@ -10,4 +10,12 @@ Set gradle wrapper for project
 
 ```
 gradle wrapper --gradle-version 6.7
+gradle build --scan
+gradle dependencyInsight --dependency junit
 ```
+
+File `build.gradle` , `settings.gradle` , `gradle.properties`
+
+File `gradle.properties`
+
+
