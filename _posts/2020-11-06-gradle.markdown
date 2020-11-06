@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Gradle 6.7"
+date:   2020-11-06 14:10:00 +0700
+categories: gradle java
+---
+Gradle
+
+Set gradle wrapper for project
+
+```
+gradle wrapper gradle-version 6.7
+```
