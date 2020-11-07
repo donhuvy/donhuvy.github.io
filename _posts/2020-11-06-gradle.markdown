@@ -12,10 +12,23 @@ Set gradle wrapper for project
 gradle wrapper --gradle-version 6.7
 gradle build --scan
 gradle dependencyInsight --dependency junit
+gradle dependencyInsight --configuration compile --dependency postgresql
 ```
 
 File `build.gradle` , `settings.gradle` , `gradle.properties`
 
 File `gradle.properties`
 
+File `build.gradle` , still build if test cases fail.
 
+```groovy
+test {
+    ignoreFailures = true
+}
+```
+
+Build, but not test.
+
+```
+gradle build -x test
+```

@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "Python 3.9"
+date:   2020-11-07 11:19:00 +0700
+categories: python python-39
+---
+Python 3.9
+
+File `form.python`
+
+
+```python
+import tkinter as tk
+
+
+class Application(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.master = master
+        self.pack()
+        self.create_widgets()
+
+    def create_widgets(self):
+        self.hi_there = tk.Button(self)
+        self.hi_there["text"] = "Hay bam vao di\n(click me)"
+        self.hi_there["command"] = self.say_hi
+        self.hi_there.pack(side="top")
+
+        self.quit = tk.Button(self, text="QUIT", fg="red",
+                              command=self.master.destroy)
+        self.quit.pack(side="bottom")
+
+    def say_hi(self):
+        print("chao ban")
+
+
+root = tk.Tk()
+app = Application(master=root)
+app.mainloop()
+```
