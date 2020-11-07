@@ -38,3 +38,22 @@ root = tk.Tk()
 app = Application(master=root)
 app.mainloop()
 ```
+
+
+Through a ball to sky, graph of coordinate
+
+```python
+import numpy as numpy
+import matplotlib.pyplot as pyplot
+
+v_0 = 5
+g = 9.81
+t = numpy.linspace(0, 1, 5000)
+
+y = v_0 * t - 0.5 * g * t ** 2
+
+pyplot.plot(t, y)
+pyplot.xlabel("t (second)")
+pyplot.ylabel("b (met)")
+pyplot.show()
+```
