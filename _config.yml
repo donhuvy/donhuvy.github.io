@@ -21,8 +21,8 @@
 title: Do Nhu Vy
 email: donhuvy@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  I am a software developer. My main programming languages are C#, Java, Python. 
-  My favourite tools are Visual Studio 2019, IntelliJ IDEA, PyCharm.
+  C#, Java, JavaScrip, Python, C++. 
+  ASP.NET Core, Spring Boot, SQL Server.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: donhuvy

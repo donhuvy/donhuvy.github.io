@@ -57,3 +57,11 @@ pyplot.xlabel("t (second)")
 pyplot.ylabel("b (met)")
 pyplot.show()
 ```
+
+```python
+x = list(range(6, 11, 1))
+print(x)
+print(x[0])
+print(x[4])
+print(x[0] + x[1])
+```
