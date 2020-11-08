@@ -187,3 +187,49 @@ namespace Listing_1._5_A_parallel_LINQ_query
 
 }
 ```
+
+### Further inform the parallel process.
+
+```csharp
+using System;
+using System.Linq;
+
+namespace Listing_1._5_A_parallel_LINQ_query
+{
+    class Program
+    {
+        class Person
+        {
+            public string Name { get; set; }
+            public string City { get; set; }
+        }
+
+        static void Main(string[] args)
+        {
+            Person[] people = new Person[]
+            {
+                new Person{ Name = "Alan", City = "Hull"},
+                new Person{ Name = "Beryl", City = "Seatle"},
+                new Person{ Name = "Charles", City = "London"},
+                new Person{ Name = "David", City = "Seatle"},
+                new Person{ Name = "Eddy", City = "Paris"},
+                new Person{ Name = "Fred", City = "Berlin"},
+                new Person{ Name = "Gordon", City = "Hull"},
+                new Person{ Name = "Henry", City = "Seatle"},
+                new Person{ Name = "Issac", City = "Seatle"},
+                new Person{ Name = "James", City = "London"}
+            };
+            var result = from person in people.AsParallel()
+                         .WithDegreeOfParallelism(4)
+                         .WithExecutionMode(ParallelExecutionMode.ForceParallelism)
+                         where person.City == "Seatle"
+                         select person;
+            foreach (var person in result)
+                Console.WriteLine(person.Name);
+            Console.WriteLine("Finished processing. Press a key to end.");
+            Console.Read();
+        }
+    }
+
+}
+```
