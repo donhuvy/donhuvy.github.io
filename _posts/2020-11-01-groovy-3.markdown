@@ -73,6 +73,29 @@ use(TimeCategory){
 
 println nextWeekPlusTenHours
 ```
+and
+
+```groovy
+import groovy.swing.SwingBuilder
+
+import javax.swing.*
+import java.awt.*
+
+def myapp = new SwingBuilder()
+
+def myframe = myapp.frame(title: 'Tuesday', location: [100, 500], size: [400, 200], defaultCloseOperation: WindowConstants.EXIT_ON_CLOSE) {
+    panel(layout: new GridLayout(3, 2, 5, 5)) {
+        label(text: 'Employee name:', horizontalAlignment: JLabel.RIGHT)
+        textField(text: '', columns: 10)
+        label(text: 'Date of birth:', horizontalAlignment: JLabel.RIGHT)
+        textField(text: '', columns: 10)
+        label(text: 'Email:', horizontalAlignment: JLabel.RIGHT)
+        textField(text: '', columns: 20)
+    }
+}
+
+myframe.setVisible(true)
+```
 
 
 [https://www.oodesign.com/](https://www.oodesign.com/)
