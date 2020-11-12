@@ -341,7 +341,19 @@ CREATE TABLE dogs
 
 INSERT INTO dogs(name, age, weight) VALUES ('Rover', 3, 35);
 ```
-PL/pgSQL
+PL/pgSQL - PostgreSQL 13.0
+
+From CMD
+
+```
+postgres --version
+```
+
+return
+
+```
+postgres (PostgreSQL) 13.0
+```
 
 ```sql
 drop function if exists test_security_definer;
