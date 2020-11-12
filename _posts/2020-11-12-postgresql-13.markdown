@@ -401,3 +401,8 @@ $$ language sql;
 
 select a();
 ```
+must use upper case `V` , not `v`
+
+```
+postgres -V
+```
