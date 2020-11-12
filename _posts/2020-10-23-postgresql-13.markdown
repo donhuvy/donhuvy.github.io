@@ -377,3 +377,19 @@ select string_agg(agreement_id, ', ') from agreement_item;
 -- result
 -- "8000, DS-1000-SALES, DS-1000-PURCH, 9000, AGR_SALES"
 ```
+
+```sql
+do
+$$
+declare
+   counter int = 0;
+begin  
+  loop
+     counter = counter + 4;	
+	 exit when counter > 100;	
+	 continue when mod(counter,10) = 0;
+	 raise notice '%', counter;
+  end loop;
+end;
+$$
+```
