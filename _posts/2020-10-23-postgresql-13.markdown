@@ -370,3 +370,10 @@ $$ language sql security invoker;
 SELECT test_security_definer();
 SELECT test_security_invoker();
 ```
+
+```sql
+select string_agg(agreement_id, ', ') from agreement_item;
+
+-- result
+-- "8000, DS-1000-SALES, DS-1000-PURCH, 9000, AGR_SALES"
+```
