@@ -393,3 +393,11 @@ begin
 end;
 $$
 ```
+
+```sql
+create or replace function a() returns setof integer as $$
+	select 1;
+$$ language sql;
+
+select a();
+```
