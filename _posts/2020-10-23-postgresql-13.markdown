@@ -341,3 +341,20 @@ CREATE TABLE dogs
 
 INSERT INTO dogs(name, age, weight) VALUES ('Rover', 3, 35);
 ```
+PL/pgSQL
+
+```sql
+drop function if exists test_security_definer;
+CREATE FUNCTION test_security_definer() RETURNS text AS $$
+	SELECT FORMAT('current_user:%s session_user:%s', CURRENT_USER, SESSION_USER);
+	
+$$ LANGUAGE SQL SECURITY DEFINER;
+
+drop function if exists test_security_invoker;
+create function test_security_invoker() returns text as $$
+	select format('current_user:%s:session_user:%s', current_user, session_user);
+$$ language sql security invoker;
+
+SELECT test_security_definer();
+SELECT test_security_invoker();
+```
