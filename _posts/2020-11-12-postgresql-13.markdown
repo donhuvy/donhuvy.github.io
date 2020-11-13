@@ -406,3 +406,9 @@ must use upper case `V` , not `v`
 ```
 postgres -V
 ```
+
+dump command
+
+```
+D:\Program Files\pgAdmin 4\v4\runtime\pg_dump.exe --file "C:\\Users\\donhuvy\\DOCUME~1\\vv" --host "localhost" --port "5433" --username "postgres" --no-password --verbose --format=p --encoding "UTF8" "localdist"
+```
