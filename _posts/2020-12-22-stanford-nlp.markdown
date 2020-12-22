@@ -6,6 +6,16 @@ categories: Java NLP
 ---
 Stanford NLP
 
+Install
+
+```
+cd /d C:\Users\donhuvy\Downloads
+
+mvn install:install-file -Dfile=stanford-corenlp-4.2.0-models.jar -DgroupId=edu.stanford.nlp -DartifactId=english-models -Dversion=4.2.0 -Dpackaging=jar
+```
+
+
+
 File `pom.xml`
 
 ```xml
@@ -27,6 +37,11 @@ File `pom.xml`
         <dependency>
             <groupId>edu.stanford.nlp</groupId>
             <artifactId>stanford-corenlp</artifactId>
+            <version>4.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>english-models</artifactId>
             <version>4.2.0</version>
         </dependency>
         <dependency>
@@ -79,6 +94,8 @@ File `pom.xml`
         </pluginManagement>
     </build>
 </project>
+```
 
-```
-```
+File https://nlp.stanford.edu/software/stanford-corenlp-4.2.0-models.jar
+
+
