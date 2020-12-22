@@ -121,3 +121,23 @@ tokens and ner tags
 
 Process finished with exit code 0
 ```
+
+### VnCoreNLP
+
+https://github.com/vncorenlp/VnCoreNLP
+
+https://raw.githubusercontent.com/vncorenlp/VnCoreNLP/master/VnCoreNLP-1.1.1.jar
+
+```
+cd /d C:\Users\donhuvy\Downloads
+
+mvn install:install-file -Dfile=VnCoreNLP-1.1.1.jar -DgroupId=VnCoreNLP -DartifactId=VnCoreNLP -Dversion=1.1.1 -Dpackaging=jar
+```
+
+```xml
+<dependency>
+    <groupId>VnCoreNLP</groupId>
+    <artifactId>VnCoreNLP</artifactId>
+    <version>1.1.1</version>
+</dependency>
+```
