@@ -98,4 +98,26 @@ File `pom.xml`
 
 File https://nlp.stanford.edu/software/stanford-corenlp-4.2.0-models.jar
 
+Tune: `_JAVA_OPTIONS=-Xmx8g`
 
+![result](/images/2020_12_22_heap.png)
+
+Result
+
+```
+"C:\Program Files\Java\jdk1.8.0_271\bin\java.exe" -Xmx8g "-javaagent:D:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\lib\idea_rt.jar=49893:D:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_271\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\rt.jar;E:\foo\accounting\target\classes;C:\Users\donhuvy\.m2\repository\edu\stanford\nlp\stanford-corenlp\4.2.0\stanford-corenlp-4.2.0.jar;C:\Users\donhuvy\.m2\repository\com\apple\AppleJavaExtensions\1.4\AppleJavaExtensions-1.4.jar;C:\Users\donhuvy\.m2\repository\de\jollyday\jollyday\0.4.9\jollyday-0.4.9.jar;C:\Users\donhuvy\.m2\repository\org\apache\commons\commons-lang3\3.3.1\commons-lang3-3.3.1.jar;C:\Users\donhuvy\.m2\repository\org\apache\lucene\lucene-queryparser\7.5.0\lucene-queryparser-7.5.0.jar;C:\Users\donhuvy\.m2\repository\org\apache\lucene\lucene-queries\7.5.0\lucene-queries-7.5.0.jar;C:\Users\donhuvy\.m2\repository\org\apache\lucene\lucene-sandbox\7.5.0\lucene-sandbox-7.5.0.jar;C:\Users\donhuvy\.m2\repository\org\apache\lucene\lucene-analyzers-common\7.5.0\lucene-analyzers-common-7.5.0.jar;C:\Users\donhuvy\.m2\repository\org\apache\lucene\lucene-core\7.5.0\lucene-core-7.5.0.jar;C:\Users\donhuvy\.m2\repository\javax\servlet\javax.servlet-api\3.0.1\javax.servlet-api-3.0.1.jar;C:\Users\donhuvy\.m2\repository\xom\xom\1.3.2\xom-1.3.2.jar;C:\Users\donhuvy\.m2\repository\xml-apis\xml-apis\1.3.03\xml-apis-1.3.03.jar;C:\Users\donhuvy\.m2\repository\xerces\xercesImpl\2.8.0\xercesImpl-2.8.0.jar;C:\Users\donhuvy\.m2\repository\xalan\xalan\2.7.0\xalan-2.7.0.jar;C:\Users\donhuvy\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\donhuvy\.m2\repository\org\ejml\ejml-core\0.39\ejml-core-0.39.jar;C:\Users\donhuvy\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\donhuvy\.m2\repository\org\ejml\ejml-ddense\0.39\ejml-ddense-0.39.jar;C:\Users\donhuvy\.m2\repository\org\ejml\ejml-simple\0.39\ejml-simple-0.39.jar;C:\Users\donhuvy\.m2\repository\org\ejml\ejml-fdense\0.39\ejml-fdense-0.39.jar;C:\Users\donhuvy\.m2\repository\org\ejml\ejml-cdense\0.39\ejml-cdense-0.39.jar;C:\Users\donhuvy\.m2\repository\org\ejml\ejml-zdense\0.39\ejml-zdense-0.39.jar;C:\Users\donhuvy\.m2\repository\org\ejml\ejml-dsparse\0.39\ejml-dsparse-0.39.jar;C:\Users\donhuvy\.m2\repository\org\ejml\ejml-fsparse\0.39\ejml-fsparse-0.39.jar;C:\Users\donhuvy\.m2\repository\org\glassfish\javax.json\1.0.4\javax.json-1.0.4.jar;C:\Users\donhuvy\.m2\repository\com\google\protobuf\protobuf-java\3.9.2\protobuf-java-3.9.2.jar;C:\Users\donhuvy\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\donhuvy\.m2\repository\javax\xml\bind\jaxb-api\2.4.0-b180830.0359\jaxb-api-2.4.0-b180830.0359.jar;C:\Users\donhuvy\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar;C:\Users\donhuvy\.m2\repository\com\sun\xml\bind\jaxb-impl\2.4.0-b180830.0438\jaxb-impl-2.4.0-b180830.0438.jar;C:\Users\donhuvy\.m2\repository\edu\stanford\nlp\english-models\4.2.0\english-models-4.2.0.jar;C:\Users\donhuvy\.m2\repository\org\slf4j\slf4j-api\2.0.0-alpha1\slf4j-api-2.0.0-alpha1.jar" org.example.App
+Picked up _JAVA_OPTIONS: -Xmx8g
+Hello World!
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#noProviders for further details.
+---
+entities found
+	detected entity: 	Joe Smith	PERSON
+	detected entity: 	Seattle	CITY
+---
+tokens and ner tags
+(Joe,PERSON) (Smith,PERSON) (is,O) (from,O) (Seattle,CITY) (.,O)
+
+Process finished with exit code 0
+```
