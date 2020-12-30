@@ -6,8 +6,6 @@ categories: Python AI
 ---
 Scikit get famous person name
 
-Scikit get famous person name
-
 ```python
 import logging
 from time import time
