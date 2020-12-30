@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Scikit get famous person name
+title:  "Scikit get famous person name"
 date:   2020-12-30 16:45:00 +0700
 categories: Python AI
 ---
 Scikit get famous person name
 
+Scikit get famous person name
 
 ```python
 import logging
