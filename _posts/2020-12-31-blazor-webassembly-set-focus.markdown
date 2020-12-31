@@ -8,7 +8,7 @@ Blazor webassembly set UI focus
 
 File `Uifocus.razor` (must start with Upper case `U`) put in the same folder with file `Counter.razor`
 
-```
+```html
 @page "/ui-focus"
 
 <h1>Set UI focus</h1>
@@ -28,7 +28,7 @@ File `Uifocus.razor` (must start with Upper case `U`) put in the same folder wit
 
 File `NavMenu.razor`
 
-```
+```html
 <div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">a2021</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
