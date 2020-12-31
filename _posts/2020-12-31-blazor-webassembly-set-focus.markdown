@@ -6,6 +6,8 @@ categories: Blazor Csharp
 ---
 Blazor webassembly set UI focus
 
+Development environment: ASP.NET Core Blazor WebAssembly version 5 with Individual security, Microsoft Visual Studio Community 2019 Version 16.8.3, .NET 5 version 5.0.101, Windows x64 version 2004, DevExpress Blazor web-assembly version 20.0.4 .
+
 File `Uifocus.razor` (must start with Upper case `U`) put in the same folder with file `Counter.razor`
 
 ```html
