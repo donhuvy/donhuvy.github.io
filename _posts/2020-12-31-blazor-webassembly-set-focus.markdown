@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Blazor webassebmly set UI focus"
+title:  "Blazor webassembly set UI focus"
 date:   2020-12-31 23:08:00 +0700
 categories: Blazor Csharp
 ---
-Blazor webassebmly set UI focus
+Blazor webassembly set UI focus
 
 File `Uifocus.razor` (must start with Upper case `U`) put in the same folder with file `Counter.razor`
 
