@@ -16,7 +16,7 @@ pdf_reader = PyPDF2.PdfFileReader(pdf)
 print(pdf_reader.numPages)
 page = pdf_reader.getPage(0)
 
-print(page.extractText())
+print(page.extractText()) 
 
 pdf.close()
 ```
